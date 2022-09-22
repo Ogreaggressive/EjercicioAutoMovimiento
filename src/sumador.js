@@ -8,22 +8,33 @@ class Auto{
     Auto.direccion ='N';
   }
 
+  elegirDireccion(mov)
+  {
+    if(mov == "A")
+    {
+      if(Auto.direccion == "N")
+      {
+        Auto.posy +=1;
+      }
+      else{
+        Auto.posx +=1;
+      }
+    }
+    if(mov == "D")
+    {
+      Auto.direccion = "E";
+    }
+    if(mov == "I")
+    {
+      Auto.direccion = "O";
+    }
+  }
+
   mover(mov) 
   {
     for(let i=0; i<mov.length; i++)
     {
-      if(mov[i] == "A")
-      {
-        Auto.posy +=1;
-      }
-      if(mov[i] == "D")
-      {
-        Auto.direccion = "E";
-      }
-      if(mov[i] == "I")
-      {
-        Auto.direccion = "O";
-      }
+      this.elegirDireccion(mov[i])
     }
     
     return Auto.posx.toString() + ',' + Auto.posy.toString() + Auto.direccion
