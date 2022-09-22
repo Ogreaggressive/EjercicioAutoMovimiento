@@ -1,5 +1,5 @@
-function sumar(a, b) {
-  return a + b;
+function mover(mov) {
+  return "0,0N";
 }
 
-export default sumar;
+export default mover;
