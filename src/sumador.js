@@ -7,10 +7,15 @@ var auto = {
 
 function mover(mov) {
   
-  if(mov == "N")
+  if(mov == "A")
   {
     auto.posy +=1;
   }
+  if(mov == "D")
+  {
+    auto.direccion = "E";
+  }
+
   return auto.posx.toString() + ',' + auto.posy.toString() + auto.direccion
 }
 

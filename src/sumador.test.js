@@ -5,6 +5,9 @@ describe("mover auto", () => {
     expect(mover()).toEqual("0,0N");
   });
   it("deberia moverse hacia el norte", () => {
-    expect(mover("N")).toEqual("0,1N");
+    expect(mover("A")).toEqual("0,1N");
+  });
+  it("deberia cambiar de direccion a la derecha", () => {
+    expect(mover("D")).toEqual("0,1E");
   });
 });
