@@ -58,8 +58,12 @@ class Auto{
     for(let i=0; i<mov.length; i++)
     {
       this.elegirDireccion(mov[i])
+      if(Auto.posy < 0 || Auto.posx < 0)
+      {
+        return "se salio de bordes"
+      }
     }
-    
+
     return Auto.posx.toString() + ',' + Auto.posy.toString() + Auto.direccion
   }
 }

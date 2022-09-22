@@ -32,4 +32,10 @@ describe("auto.mover auto", () => {
   it("deberia de moverse muchos pasos hacia el sur por distinto camino", () => {
     expect(auto.mover("AAAAAIIAAA")).toEqual("0,2S");
   });
+  it("deberia de moverse por todo el mapa sin salir de los bordes, esta en bordes", () => {
+    expect(auto.mover("ADAAIADADAA")).toEqual("3,0S");
+  });
+  it("deberia de moverse por todo el mapa sin salir de los bordes,no esta en bordes", () => {
+    expect(auto.mover("AIIAAA")).toEqual("se salio de bordes");
+  });
 });
