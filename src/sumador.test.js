@@ -24,12 +24,12 @@ describe("auto.mover auto", () => {
     expect(auto.mover("ADAA")).toEqual("2,1E");
   });
   it("deberia de moverse muchos pasos hacia el oeste", () => {
-    expect(auto.mover("AIAA")).toEqual("-2,1O");
+    expect(auto.mover("ADAAIIAA")).toEqual("0,1O");
   });
   it("deberia de moverse muchos pasos hacia el sur", () => {
-    expect(auto.mover("ADDAAA")).toEqual("0,-2S");
+    expect(auto.mover("AAAAADDAAA")).toEqual("0,2S");
   });
   it("deberia de moverse muchos pasos hacia el sur por distinto camino", () => {
-    expect(auto.mover("AIIAAA")).toEqual("0,-2S");
+    expect(auto.mover("AAAAAIIAAA")).toEqual("0,2S");
   });
 });
