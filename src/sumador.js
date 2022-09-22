@@ -8,34 +8,47 @@ class Auto{
     Auto.direccion ='N';
   }
 
+  aumentarPos(orientacion)
+  {
+    if(orientacion == "N")
+    {
+      Auto.posy +=1;
+    }
+    if(orientacion == "S")
+    {
+      Auto.posy -=1;
+    }
+    else if (orientacion == "E"){
+      Auto.posx +=1;
+    }
+    else if (orientacion == "O"){
+      Auto.posx -=1;
+    }
+  }
+
   elegirDireccion(mov)
   {
     let orientacion = ["O","N","E","S"]
     if(mov == "A")
     {
-      if(Auto.direccion == "N")
-      {
-        Auto.posy +=1;
-      }
-      if(Auto.direccion == "S")
-      {
-        Auto.posy -=1;
-      }
-      else if (Auto.direccion == "E"){
-        Auto.posx +=1;
-      }
-      else if (Auto.direccion == "O"){
-        Auto.posx -=1;
-      }
+      this.aumentarPos(Auto.direccion)
     }
     if(mov == "D")
     {
       let cambio = orientacion.indexOf(Auto.direccion)
+      if(cambio==3)
+      {
+        cambio = -1;
+      }
       Auto.direccion = orientacion[cambio + 1]
     }
     if(mov == "I")
     {
       let cambio = orientacion.indexOf(Auto.direccion)
+      if(cambio==0)
+      {
+        cambio = 4;
+      }
       Auto.direccion = orientacion[cambio - 1]
     }
   }
