@@ -1,26 +1,32 @@
 
-var auto = {
-  posx : 0,
-  posy : 0,
-  direccion: "N"
+class Auto{
+
+  constructor()
+  {
+    Auto.posy = 0;
+    Auto.posx = 0;
+    Auto.direccion ='N';
+  }
+
+  mover(mov) 
+  {
+    for(let i=0; i<mov.length; i++)
+    {
+      if(mov[i] == "A")
+      {
+        Auto.posy +=1;
+      }
+      if(mov[i] == "D")
+      {
+        Auto.direccion = "E";
+      }
+      if(mov[i] == "I")
+      {
+        Auto.direccion = "O";
+      }
+    }
+    
+    return Auto.posx.toString() + ',' + Auto.posy.toString() + Auto.direccion
+  }
 }
-
-function mover(mov) {
-  
-  if(mov == "A")
-  {
-    auto.posy +=1;
-  }
-  if(mov == "D")
-  {
-    auto.direccion = "E";
-  }
-  if(mov == "I")
-  {
-    auto.direccion = "O";
-  }
-
-  return auto.posx.toString() + ',' + auto.posy.toString() + auto.direccion
-}
-
-export default mover;
+export default Auto;
