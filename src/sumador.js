@@ -16,8 +16,11 @@ class Auto{
       {
         Auto.posy +=1;
       }
-      else{
+      else if (Auto.direccion == "E"){
         Auto.posx +=1;
+      }
+      else if (Auto.direccion == "O"){
+        Auto.posx -=1;
       }
     }
     if(mov == "D")
