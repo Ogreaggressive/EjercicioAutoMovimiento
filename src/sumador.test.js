@@ -26,4 +26,7 @@ describe("auto.mover auto", () => {
   it("deberia de moverse muchos pasos hacia el oeste", () => {
     expect(auto.mover("AIAA")).toEqual("-2,1O");
   });
+  it("deberia de moverse muchos pasos hacia el sur", () => {
+    expect(auto.mover("ADDAAA")).toEqual("0,-2S");
+  });
 });

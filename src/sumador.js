@@ -10,11 +10,16 @@ class Auto{
 
   elegirDireccion(mov)
   {
+    let orientacion = ["O","N","E","S"]
     if(mov == "A")
     {
       if(Auto.direccion == "N")
       {
         Auto.posy +=1;
+      }
+      if(Auto.direccion == "S")
+      {
+        Auto.posy -=1;
       }
       else if (Auto.direccion == "E"){
         Auto.posx +=1;
@@ -25,11 +30,13 @@ class Auto{
     }
     if(mov == "D")
     {
-      Auto.direccion = "E";
+      let cambio = orientacion.indexOf(Auto.direccion)
+      Auto.direccion = orientacion[cambio + 1]
     }
     if(mov == "I")
     {
-      Auto.direccion = "O";
+      let cambio = orientacion.indexOf(Auto.direccion)
+      Auto.direccion = orientacion[cambio - 1]
     }
   }
 
