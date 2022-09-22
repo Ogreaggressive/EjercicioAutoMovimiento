@@ -15,6 +15,10 @@ function mover(mov) {
   {
     auto.direccion = "E";
   }
+  if(mov == "I")
+  {
+    auto.direccion = "O";
+  }
 
   return auto.posx.toString() + ',' + auto.posy.toString() + auto.direccion
 }
