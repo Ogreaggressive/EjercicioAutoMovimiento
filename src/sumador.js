@@ -58,7 +58,7 @@ class Auto{
     for(let i=0; i<mov.length; i++)
     {
       this.elegirDireccion(mov[i])
-      if(Auto.posy < 0 || Auto.posx < 0)
+      if(Auto.posy < 0 || Auto.posx < 0 || Auto.posy > 9 || Auto.posx > 9)
       {
         return "se salio de bordes"
       }
