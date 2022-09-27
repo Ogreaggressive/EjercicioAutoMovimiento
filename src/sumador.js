@@ -53,7 +53,7 @@ class Auto{
     }
   }
 
-  mover(mov) 
+  ejecutar(mov) 
   {
     for(let i=0; i<mov.length; i++)
     {

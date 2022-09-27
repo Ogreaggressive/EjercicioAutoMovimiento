@@ -10,6 +10,6 @@ let auto
 button.addEventListener("click", (event) => {
   event.preventDefault();
   auto = new Auto();
-  let respuesta = auto.mover(cad.value)
+  let respuesta = auto.ejecutar(cad.value)
   res.innerHTML = "<p>" + respuesta + "</p>" 
 });
